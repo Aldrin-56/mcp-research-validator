@@ -19,15 +19,24 @@ You do not need to download this repository physically. You can plug it straight
   "mcpServers": {
     "research-validator": {
       "command": "uvx",
-      "args": ["git+https://github.com/YourGitHubUsername/mcp-research-validator"]
+      "args": ["git+https://github.com/Aldrin-56/mcp-research-validator"]
     }
   }
 }
 ```
 
-*(Note: Replace `YourGitHubUsername` with the actual GitHub username where this repo is hosted).*
-
 3. Restart your AI client.
+
+## User Manual: How to use it in Chat
+
+Once installed, you don't need to write any code. Just talk to your AI naturally. 
+
+**Example Workflow:**
+1. Open a new chat in Cursor/Claude/Antigravity.
+2. Ask the AI: *"I need to write the simulation section. Please use the `self_validating_framework` prompt from your MCP tools to ensure you don't hallucinate."*
+3. The AI will automatically fetch the rules from this server, lock onto the exact algorithm names from your base paper, and only write the code after mathematically proving that it hasn't deviated from your project's scope. 
+
+If the AI senses it is missing context, the framework forces it to **STOP** and ask you for the ground-truth data instead of guessing.
 
 Once connected, your AI agent will automatically inherit the `self_validating_framework` rules and mathematically validate its own outputs for your research projects.
 
