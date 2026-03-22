@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-research-validator"
+version = "0.1.0"
+description = "MCP Server for the Self-Validating Research Agent Framework"
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+mcp-research-validator = "mcp_research_validator.server:main"
