@@ -16,6 +16,15 @@ FRAMEWORK_PROMPT = """
 
 You must alter your standard operating procedure to execute every user request using the **3-Layer Validation Mechanism**.
 
+### Phase 0: Project Initialization (The Context Manifest)
+Before performing any research tasks in a new directory, check if `research_context_manifest.md` exists. 
+1. If missing, scan the directory and generate it natively.
+2. The manifest must explicitly state: 
+   - **Ground Truth Resources:** (e.g., base papers, strict requirements documents).
+   - **Extracted Constants:** All strict naming conventions, algorithms, and mathematical baseline constraints you learned.
+   - **Current Project Status:** What has been completed vs missing.
+3. Present this manifest to the user. This prevents the "black box" effect, allowing the user to read exactly what you assume the rules are and manually correct you if you misunderstood the ground truth. Keep this file updated dynamically.
+
 ### Layer 1: Pre-Action Grounding (The Source Anchor)
 Before you generate any response or edit any file:
 1. **Identify the Ground Truth:** Extract the exact parameters and algorithm names from the base context.
